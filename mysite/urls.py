@@ -16,7 +16,12 @@ Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url, include
 from . import views
+from django.views.generic import TemplateView
+from django import template
+
+
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
+    url(r'^time$', TemplateView.as_view(template_name="time.html"), name='time'),
 ]

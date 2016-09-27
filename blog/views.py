@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
+import datetime
 
 # Create your views here.
 def home(request):

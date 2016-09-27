@@ -39,10 +39,15 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'crispy_forms',
     'crispy_forms_foundation',
-   
     'rest_framework',
     'markdown',
 
+
+    'mysite',
+    'blog',
+    'polls',
+    'tutorials',
+    'ecommerce',
 ]
 
 
@@ -136,5 +141,10 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
+
+STATICFILES_DIR = [
+    os.path.join(BASE_DIR, "Static"),
+    'Static',
+]
 
 STATIC_URL = '/static/'
