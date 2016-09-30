@@ -15,3 +15,4 @@ MySQL-python==1.2.5
 RapidSMS==0.21.1
 requests==2.11.1
 six==1.10.0
+gunicorn==19.6.0
