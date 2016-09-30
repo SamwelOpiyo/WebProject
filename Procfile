@@ -1,1 +1,1 @@
-Web: python manage.py runserver
+web: gunicorn samwelopiyo:app
