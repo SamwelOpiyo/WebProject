@@ -1,1 +1,1 @@
-web: gunicorn samwelopiyo.WebProject.wsgi --log-file -
+web: gunicorn WebProject.wsgi --log-file -
