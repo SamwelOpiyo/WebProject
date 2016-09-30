@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'crispy_forms_foundation',
     'rest_framework',
     'markdown',
+    'gunicorn',
+
 
 
     'mysite',
