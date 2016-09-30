@@ -1,1 +1,1 @@
-web: gunicorn samwelopiyo:app
+web: gunicorn Webproject.wsgi
