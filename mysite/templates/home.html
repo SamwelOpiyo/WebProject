@@ -1,0 +1,784 @@
+
+{% extends "base.html" %}
+{% load staticfiles %}
+    {% block title %}
+        <meta name="description" content="Business Website for Samwel Opiyo, a Web and Mobile Applications Developer.">
+        <title>Home|samwelopiyo.com</title>
+        <link rel="stylesheet" href="csspreloader/main.css">
+    {% endblock %}
+    {% block content %}
+    <script type="text/javascript" src="{% static 'myjavascript.js' %}"></script>
+
+    <style type="text/css">
+    .panel:hover {
+        box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+    }
+    .dt-wrapper {
+          float: left;
+          margin-right: 5em;
+      }
+
+      .anim-wrapper {
+          float: right;
+          display: inline-block;
+      }
+    .panel-footer .btn:hover {
+        border: 1px solid #f4511e;
+        background-color: #fff !important;
+        color: #f4511e;
+    }
+    .panel-heading {
+        color: #fff !important;
+        background-color: purple !important;
+        padding: 25px;
+        border-bottom: 1px solid transparent;
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 2px;
+    }
+    .panel-footer {
+        background-color: #DA70D6 !important;
+    }
+    .panel-footer h3 {
+        font-size: 32px;
+    }
+    .panel-footer h4 {
+        color: #aaa;
+        font-size: 14px;
+    }
+    .panel-footer .btn {
+        margin: 15px 0;
+        background-color: #f4511e;
+        color: #fff;
+    }
+    .btn-success{background-color: purple;}
+  .navbar {
+        margin-bottom: 0;
+        background-color: #f4511e;
+        z-index: 9999;
+        border: 0;
+        font-size: 12px !important;
+        line-height: 1.42857143 !important;
+        letter-spacing: 2px;
+        border-radius: 0;
+    }
+    .navbar li a, .navbar .navbar-brand {
+        color: #fff !important;
+    }
+    .navbar-nav li a:hover, .navbar-nav li.active a {
+        color: #f4511e !important;
+        background-color: #fff !important;
+    }
+    .navbar-default .navbar-toggle {
+        border-color: transparent;
+        color: #fff !important;}
+
+  .bg-2, .bg-3 {
+      background-color: #474e5d; /* Dark Blue */
+      color: #ffffff;
+  }
+  .bg-1, .bg-2, .bg-3 {
+      padding-top: 1%;
+      padding-bottom: 1%;
+  }
+
+  .carousel-control.right, .carousel-control.left {
+
+      color: purple;
+  }
+
+  .carousel-indicators li {
+      border-color: purple;
+  }
+
+  .carousel-indicators li.active {
+      background-color: purple;
+  }
+
+  .item h3 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+
+  .item span {
+      font-style: normal;
+  }
+
+  tr:hover{background-color:purple;
+  color:black;}
+
+  #freelancer{border:5%;
+  border-color:purple;
+  border-radius:4%;}
+  .anim-wrapper {
+          float: left;
+          display: inline-block;
+      }
+
+
+    </style>
+    <!-- JAVASCRIPT SECTION  -->
+  <script type="text/javascript">
+    $(function() {
+      $( ".datepicker" ).datepicker();
+    });
+  </script>
+  <!-- UNCOMMENT WHEN TRYING DATES IN OTHER MONTHS -->
+  <script type="text/javascript">
+    $(function() {
+      $( ".datepicker" ).datepicker({
+          showOtherMonths: true,
+          selectOtherMonths: true
+      });
+    });
+  </script>
+
+  <!-- UNCOMMENT WHEN TRYING TO SHOW A BUTTON PANEL -->
+  <script type="text/javascript">
+   $(function() {
+      $( ".datepicker" ).datepicker({
+          showButtonPanel: true
+      });
+    });
+  </script>
+
+  <!-- UNCOMMENT WHEN TRYING TO CHANGE MONTHS IN A DROPDOWN MENU -->
+  <script type="text/javascript">
+      $(function() {
+      $( ".datepicker" ).datepicker({
+        changeMonth: true,
+        changeYear: true
+      });
+    });
+  </script>
+  <script type="text/javascript">
+     $(function() {
+      $( ".datepicker" ).datepicker({
+        numberOfMonths: 3
+      });
+    });
+  </script>
+  <!-- UNCOMMENT WHEN TRYING ANIMATIONS -->
+  <script type="text/javascript">
+   $(function() {
+      $( ".datepicker" ).datepicker();
+      $( ".anim" ).change(function() {
+        $( ".datepicker" ).datepicker( "option", "showAnim", $(this).val() );
+      });
+    });
+  </script>
+
+    <script>document.getElementById(“myPage”).className = “loaded”;</script>
+
+
+  <script type='text/javascript'>(function(d) {
+      var po = d.createElement('script');
+      po.type = 'text/javascript'; po.async = true; po.src = '//static.flnwdgt.com/build/js/hireme-sdk.js';
+      var s = d.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(po, s);
+  })(document);</script>
+
+
+
+
+
+    <script type="text/javascript">
+          $(document).ready(function(){
+              $("#myBtn").click(function(){
+                  $("#myModal").modal();
+              });
+          });
+  $(document).ready(function(){
+    // Add smooth scrolling to all links in navbar + footer link
+    $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    });
+  })
+  function googleTranslateElementInit(){
+      new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.Simple}, 'google_translate_element');
+  }
+  </script>
+
+
+
+
+
+
+    <header class="entry-header">
+   <nav class="navbar navbar-inverse navbar-fixed-top">
+     <div class="container-fluid">
+       <div class="navbar-header page-scroll">
+       	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+         <a class="navbar-brand" href="{% url 'home' %}">samwelopiyo.com</a>
+       </div>
+       <div class="collapse navbar-collapse" id="myNavbar">
+         <ul class="nav navbar-nav">
+           <li class="active"><a href="#Home" class="page-scroll controls">Home</a></li>
+           <li><a href="#About" class="page-scroll controls">About Me</a></li>
+           <li><a href="#Tasks" class="page-scroll controls">Services Offerred</a></li>
+           <li><a href="#Resume" class="page-scroll controls">Resume</a></li>
+           <li><a href="#Gallery" class="page-scroll controls">Gallery</a></li>
+           <li><a href="#Book" class="page-scroll controls">Book an Appointment</a></li>
+           <li><a href="#Contact" class="page-scroll controls">Contact Me</a></li>
+         </ul>
+         <ul class="nav navbar-nav navbar-right">
+           {% if user.username %}
+            <li>Welcome {{ user.username }}!</p>
+            <li><a href=""><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
+           {% else %}
+            <li><a href="{% static 'sign.html' %}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="" ><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+           {% endif %}
+         </ul>
+       </div>
+     </div>
+   </nav>
+   </header>
+   <div id="loader-wrapper">
+         <div id="loader"></div>
+
+         <div class="loader-section section-left"></div>
+               <div class="loader-section section-right"></div>
+
+       </div>
+       <div id="content">
+       <hr>
+   <section id="Home">
+     <div class="row container-fluid">
+       <div class="container-fluid text-center">
+         <div class="row content">
+           <div class="col-sm-2 sidenav" height="100%">
+               <hr class="hr">
+               <div id="google_translate_element"></div>
+
+             <hr class="hr"><a href="#Home">Home</a><hr class="hr">
+             <a href="#About"  class="page-scroll">About Me</a><hr class="hr">
+             <a href="#Tasks"  class="page-scroll">Services Offerred</a><hr class="hr">
+             <a href="#Resume"  class="page-scroll">Resume</a><hr class="hr">
+              <a href="#Gallery" class="page-scroll">Gallery</a><hr class="hr">
+             <a href="#Book" class="page-scroll">Book an Appontment</a><hr class="hr">
+             <a href="#Contact" class="page-scroll">Contact Me</a><hr class="hr">
+             <a href="#Contacts" class="page-scroll">Contacts</a><hr class="hr">
+             <p style="font-size:200%;" style="float:center; font-family:arial;">Like me on:</p>
+             <a href="https://www.facebook.com/Samwel-Opiyo-1662202224043325/" target="_blank"><img id="facebook" src="{% static 'Images/facebook.png' %}" height="60" width="50" style="float:center;"></a>
+           </div>
+           <div class="col-sm-8 text-left">
+             <hr>
+             <div class="panel">
+               <div class="panel-heading">
+                 <center><h1>Welcome</h1></center>
+               </div>
+               <div class="panel-body text-justified">
+              <h2 class="text-center"><b>Need someone to develop Websites or Mobile Applications for you!!!</b></h2>
+              <p>I am a 18 year old boy who comes from Nakuru.I am currently undertaking an Undergradute Bachelors Degree in Mathematics and Computer Science at The Multimedia University of Kenya.I completed my High School education from the <strong>Maranda High School</strong> and thereafter undertook a course on <strong>Mobile Application Development
+              </strong> at <em><B>eMobilis Institute</b></em>. I got my primary education from <b>Kamagambo Adventist Primary School (KAPS)</b> and nursery education from <i>Teaching Nursery</i>.<p>
+              <p>I am <mark><strong style="font-size:150%;">skillful in web development and mobile application development</strong></mark>. I program using<div style="font-family:arial;">PHP and MYSQL.</div></p>
+              <p>I have always been having an interest in <abbr title="Information Technology">IT</abbr> especially in Software and mobile application development. In 2015, while at Maranda High School I <strong>Participated in the National Science Fair for High Schools</strong> with a <mark><em>project titled Computerized Census System</em></mark> <strong>up to the Regional Levels</strong>.</p>
+              <p>Interest in IT propelled me to participate in an <em>online Digital Essay titled</em> "<strong>Dear Mr President, My Life as a Digital Learner...</strong>" at<a href="http://essay.ekitabu.com/" target="_blank">.essay.ekitabu.com
+              </a> where I emerged 2<sup>nd</sup> Runners Up to beat the numerous students who participated in the essay as indicated in <a href="http://essay.ekitabu.com/?past_competitions=2015">essay.ekitabu.com/?past_competitions=2015</a>.</p>
+            </div>
+               <div class="panel-footer">
+                 <center>To contact me check my contacts on the contact section or use the contact me section.</center>
+               </div>
+             </div>
+
+               <div class="col-sm-4"> <div class='fln-hireme' data-username='SammyOpiyo' data-style='thin' data-type='badge' data-bg='' data-theme='' ></div></div>
+               <div class="col-sm-4"><a href="http://adfarm.mediaplex.com/ad/ck/27730-206615-8030-7">
+   <img src="https://www.paypalobjects.com/webstatic/en_GR/mktg/bnr/CEMEA_B2B_banners_revamp_sign_320x250_18mar_EN.jpg" alt="Choose PayPal Today" border="0" height=100% width=98%>
+   </a></div>
+   <div class="col-sm-4">
+   <script type="text/javascript">
+     ( function() {
+       if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [] }; };
+       var unit = {"calltype":"async[2]","publisher":"SamwelOpiyo","width":300,"height":250,"sid":"Chitika Default"};
+       var placement_id = window.CHITIKA.units.length;
+       window.CHITIKA.units.push(unit);
+       document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
+   }());
+   </script>
+
+
+   </div>
+
+           </div>
+           <hr>
+           <div class="col-sm-2 sidenav">
+             <div class="well container-fluid">
+              <a href="{% static 'Images/ekitabu3.jpg' %}" class="img-responsive" target="_blank"><img src="{% static 'Images/ekitabu3.jpg' %}" height="100%" width="100%"></a>
+             </div>
+             <div class="well container-fluid">
+               <a href="{% static 'Images/2.jpg' %}" class="img-responsive" target="_blank"><img src="{% static 'Images/2.jpg' %}" height="100%" width="100%"></a>
+             </div>
+             <div class="well container-fluid">
+               <marquee behaviour="alternate">
+                 <a href="{% static 'Images/ekitabu1.jpg' %}"><img src="{% static 'Images/ekitabu1.jpg' %}" height="10%" width="200" target="_blank"></a>
+                 <a href="{% static 'Images/ekitabu2.jpg' %}"><img src="{% static 'Images/ekitabu2.jpg' %}" height="10%" width="200" target="_blank"></a>
+                 <a href="{% static 'Images/ekitabu3.jpg' %}"><img src="{% static 'Images/ekitabu3.jpg' %}" height="10%" width="200" target="_blank"></a>
+                 <a href="{% static 'Images/ekitabu4.jpg' %}"><img src="{% static 'Images/ekitabu4.jpg' %}" height="10%" width="200" target="_blank"></a>
+                 <a href="{% static 'Images/ekitabu5.jpg' %}"><img src="{% static 'Images/ekitabu5.jpg' %}" height="10%" width="200" target="_blank"></a>
+
+               </marquee>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+     <br><hr>
+   </section>
+
+   <section id="About" style="background-color:indigo; color:#EEE8AA;">
+      <div class="row container-fluid">
+       <div class="container-fluid text-justified">
+         <div class="row content">
+           <h1 style="text-align:center; color:white;">About Me.</h1>
+
+           <div class="container-fluid bg-1 text-center">
+             <h3 style="text-align:center; color:white;">Who Am I?</h3>
+             <img src="{% static 'Images/passport.jpg' %}" alt="My Picture" height="20%" width="15%"  class="img-circle">
+             <p style="font-family:Arial;">I am a <em>handsome, tall, slim , young, dark,  Kenyan, boy</em> aged 18 years. I was born at Egerton University where I got my primary school education up to  class five at Egerton Primary School. I then transferred to <abbr title="Kamagambo Adventist Primary School">KAPS</abbr> where I completed my Primary Education. <strong>It is at Primary School where I developed the interest in <abbr title="Information Technology">IT</abbr> </strong>from my elder brother Philip Odhiambo who was undertaking a Bachelors Degree in Software Engineering at the time at Bugema University. <em>During the holidays I would Learn some skills from him that provided a foundation for my interest in <abbr title="Information Technology">IT</abbr></em>.</p>
+           </div>
+           <div class="container-fluid bg-2 text-center">
+             <h3>What Am I?</h3>
+             <p style="color:#EEE8AA;">I am an <em>upcoming Mobile Application Developer, web developer and software developer</em>.</p>
+           </div>
+
+           <div class="container-fluid bg-3 text-center">
+             <h3>Where To Find Me?</h3>
+             <p style="color:#EEE8AA;">Currently I am in Nairobi City, Kenya. <em>Contact me using the Contacts provided at the contacts section of this web page or use the contact me section</em>.</p>
+           </div>
+         </div>
+       </div>
+     </div>
+     <br><hr>
+   </section>
+
+   <section  id="Tasks" style="background-color:purple; color:white; padding:3%;">
+      <div class="row container-fluid">
+       <div class="container-fluid text-center">
+         <div class="row content">
+           <h1 style="text-align:center;">Services Offerred.</h1>
+           <div class="container-fluid text-center">
+             <p style="font-size:200%;">What I offer.</p>
+             <br>
+             <div class="row">
+               <div class="col-sm-4">
+                 <span><a href="{% static 'Images/html5.gif' %}" target="_blank"><img src="{% static 'Images/html5.gif' %}" height="20%" Width="24%" alt="HTML5 Logo"></a></span>
+                 <p style="font-size:200%;">WEB DESIGN & DEVELOPMENT.</p>
+                 <p>I develop websites using HTML 5, Jquery, Bootstrap, CSS, AJAX and Javascript.</p>
+               </div>
+               <div class="col-sm-4">
+                 <span><a href="{% static 'Images/php.gif' %}" target="_blank"><img src="{% static 'Images/php.gif' %}" height="35%" Width="40%" alt="PHP Logo"></a></span>
+                 <p style="font-size:200%;">MOBILE APPLICATION DEVELOPMENT.</p>
+                 <p>I develop mobile applications using Java, PHP, MySQL, and MySQLite.</p>
+               </div>
+               <div class="col-sm-4">
+                 <span><a href="{% static 'Images/mysql.png' %}" target="_blank"><img src="{% static 'Images/mysql.png' %}" height="65%" Width="57%" alt="MYSQL Logo"></a></span>
+                 <p style="font-size:200%;">SYSTEM DEVELOPMENT.</p>
+                 <p>I develop systems using Java, PHP, MySQL, HTML 5 and CSS.</p>
+               </div>
+             </div>
+             <div class="row">
+               <div class="col-sm-4">
+                 <span><a href="{% static 'Images/bootstrap.jpg' %}" target="_blank"><img src="{% static 'Images/bootstrap.jpg' %}" height="20%" Width="24%" alt="Bootstrap Logo"></a></span>
+                 <p style="font-size:200%;">WEB DESIGN & DEVELOPMENT.</p>
+                 <p>I develop websites using HTML 5, Bootstrap, CSS, and Javascript.</p>
+               </div>
+               <div class="col-sm-4">
+                 <span><a href="{% static 'Images/javascript.jpg' %}" target="_blank"><img src="{% static 'Images/javascript.jpg' %}" height="20%" Width="24%" alt="Javascript Logo"></a></span>
+                 <p style="font-size:200%;">MOBILE APPLICATION DEVELOPMENT.</p>
+                 <p>I develop mobile applications using Java, PHP, MySQL, HTML 5 and CSS.</p>
+               </div>
+               <div class="col-sm-4">
+                 <span><a href="{% static 'Images/css.png' %}" target="_blank"><img src="{% static 'Images/css.png' %}" height="20%" Width="24%" alt="CSS3 Logo"></a></span>
+                 <p style="font-size:200%;">SYSTEM DEVELOPMENT.</p>
+                 <p>I develop systems using Java, PHP, MySQL, HTML 5 and CSS 3.</p>
+               </div>
+             </div>
+           </div>
+           </div>
+
+
+         </div>
+       </div>
+     </div>
+   </div>
+   <br>
+   </section>
+
+   <section id="Resume">
+     <div class="jumbotron">
+       <div class="row container-fluid">
+         <div class="container-fluid text-center">
+           <div class="row content">
+             <h1 style="text-align:center;">Resume.</h1>
+             <h3 style="text-align:center;">Open my Resume by <em><b>Clicking the image found in the table</b></em>.</h3>
+
+             <table class="table table-bordered">
+               <tr>
+                 <th><center>File Name</center></th>
+                 <th><center>File Size</center></th>
+               </tr>
+               <tr>
+                 <td><a href="{% static 'cv/Samwel Opiyo-CV.pdf' %}" target="_blank"><span>Samwel Opiyo-CV.pdf</span>
+                   <img src="{% static 'Images/pdf.JPG' %}" height="4%" width="4%"></td>
+                 <td>300KB</td>
+               </tr>
+             </table>
+
+             <h2>My Favourite Quotes</h2>
+             <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+               <!-- Indicators -->
+               <ol class="carousel-indicators">
+                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                 <li data-target="#myCarousel" data-slide-to="1"></li>
+                 <li data-target="#myCarousel" data-slide-to="2"></li>
+               </ol>
+
+               <!-- Wrapper for slides -->
+               <div class="carousel-inner" role="listbox">
+                 <div class="item active">
+                   <h3 style="font-size:110%;">Do what you love to do and give it your very best. Whether it's business or baseball, or the theater, or any field.<br> If you don't love what you're doing and you can't give it your best, get out of it. <br>Life is too short. You'll be an old man before you know it.
+
+                 <br><span style="font-style:normal;">Al Lopez</span></h3>
+                 </div>
+                 <div class="item">
+                   <h3 style="font-size:110%;">Life is short, youth is finite, and opportunities endless. Have you found the intersection of your passion and the potential for world-shaping positive impact? <br>If you don't have a great idea of your own, there are plenty of great teams that need you - <br>unknown startups and established teams in giant companies alike.
+                   <br><span style="font-style:normal;">Justin Rosenstein</span></h3>
+                 </div>
+                 <div class="item">
+                   <h3 style="font-size:110%;">Spend not your time and energy competing with co-workers, neighbours, friends, family tring to prove that you are more successful or more important than them <br>for in doing so we spend our time and energy running after them and we <br>miss out our own paths to our God-given destinies.<br><span style="font-style:normal;"></span></h3>
+                 </div>
+               </div>
+
+               <!-- Left and right controls -->
+               <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                 <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                 <span class="sr-only">Previous</span>
+               </a>
+               <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                 <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                 <span class="sr-only">Next</span>
+               </a>
+             </div>
+           </div>
+         </div>
+       </div>
+       <br>
+     </div>
+   </section>
+
+   <section id="Gallery">
+     <div class="row container-fluid">
+       <div class="container-fluid text-center">
+         <div class="row content">
+           <h1 style="text-align:center;">Gallery.</h1>
+           <!-- Start WOWSlider.com BODY section -->
+           <div id="wowslider-container1">
+             <div class="ws_images"><ul>
+               <li><a href="{% static 'data1/images/ekitabu1.jpg' %}" target="_blank"><img src="{% static 'data1/images/ekitabu1.jpg' %}" alt="eKitabu" title="" id="wows1_0"/></a></li>
+               <li><a href="{% static 'data1/images/ekitabu2.jpg' %}" target="_blank"><img src="{% static 'data1/images/ekitabu2.jpg' %}" alt="eKitabu" title="" id="wows1_1"/></a></li>
+               <li><a href="{% static 'data1/images/ekitabu3.jpg' %}" target="_blank"><img src="{% static 'data1/images/ekitabu3.jpg' %}" alt="eKitabu" title="" id="wows1_2"/></a></li>
+               <li><a href="{% static 'data1/images/ekitabu4.jpg' %}" target="_blank"><img src="{% static 'data1/images/ekitabu4.jpg' %}" alt="eKitabu" title="" id="wows1_3"/></a></li>
+               <li><a href="{% static 'data1/images/ekitabu5.jpg' %}" target="_blank"><img src="{% static 'data1/images/ekitabu5.jpg' %}" alt="eKitabu" title="" id="wows1_4"/></a></li>
+               <li><a href="{% static 'data1/images/14.jpg' %}" target="_blank"><img src="{% static 'data1/images/14.jpg' %}" alt="14" title="" id="wows1_5"/></a></li>
+               <li><a href="{% static 'data1/images/15.jpg' %}" target="_blank"><img src="{% static 'data1/images/15.jpg' %}" alt="15" title="" id="wows1_6"/></a></li>
+               <li><a href="{% static 'data1/images/16.jpg' %}" target="_blank"><img src="{% static 'data1/images/16.jpg' %}" alt="16" title="" id="wows1_7"/></a></li>
+               <li><a href="{% static 'data1/images/17.jpg' %}" target="_blank"><img src="{% static 'data1/images/17.jpg' %}" alt="17" title="" id="wows1_8"/></a></li>
+               <li><a href="{% static 'data1/images/18.jpg' %}" target="_blank"><img src="{% static 'data1/images/18.jpg' %}" alt="18" title="" id="wows1_9"/></a></li>
+               <li><a href="{% static 'data1/images/19.jpg' %}" target="_blank"><img src="{% static 'data1/images/19.jpg' %}" alt="19" title="" id="wows1_10"/></a></li>
+               <li><a href="{% static 'data1/images/20.jpg' %}" target="_blank"><img src="{% static 'data1/images/20.jpg' %}" alt="20" title="" id="wows1_11"/></a></li>
+               <li><a href="{% static 'data1/images/1.jpg' %}" target="_blank"><img src="{% static 'data1/images/1.jpg' %}" alt="1" title="" id="wows1_12"/></a></li>
+               <li><a href="{% static 'data1/images/2.jpg' %}" target="_blank"><img src="{% static 'data1/images/2.jpg' %}" alt="2" title="" id="wows1_13"/></a></li>
+               <li><a href="{% static 'data1/images/3.jpg' %}" target="_blank"><img src="{% static 'data1/images/3.jpg' %}" alt="3" title="" id="wows1_14"/></a></li>
+               <li><a href="{% static 'data1/images/4.jpg' %}" target="_blank"><img src="{% static 'data1/images/4.jpg' %}" alt="4" title="" id="wows1_15"/></a></li>
+               <li><a href="{% static 'data1/images/5.jpg' %}" target="_blank"><img src="{% static 'data1/images/5.jpg' %}" alt="5" title="" id="wows1_16"/></a></li>
+               <li><a href="{% static 'data1/images/6.jpg' %}" target="_blank"><img src="{% static 'data1/images/6.jpg' %}" alt="6" title="" id="wows1_17"/></a></li>
+               <li><a href="{% static 'data1/images/7.jpg' %}" target="_blank"><img src="{% static 'data1/images/7.jpg' %}" alt="7" title="" id="wows1_18"/></a></li>
+               <li><a href="{% static 'data1/images/8.jpg' %}" target="_blank"><img src="{% static 'data1/images/8.jpg' %}" alt="8" title="" id="wows1_19"/></a></li>
+               <li><a href="{% static 'data1/images/9.jpg' %}" target="_blank"><img src="{% static 'data1/images/9.jpg' %}" alt="9" title="" id="wows1_20"/></a></li>
+               <li><a href="{% static 'data1/images/10.jpg' %}" target="_blank"><img src="{% static 'data1/images/10.jpg' %}" alt="10" title="" id="wows1_21"/></a></li>
+               <li><a href="{% static 'data1/images/11.jpg' %}" target="_blank"><img src="{% static 'data1/images/11.jpg' %}" alt="11" title="" id="wows1_22"/></a></li>
+               <li><a href="{% static 'data1/images/12.jpg' %}" target="_blank"><img src="{% static 'data1/images/12.jpg' %}" alt="12" title="" id="wows1_23"/></a></li>
+               <li><a href="{% static 'data1/images/13.jpg' %}" target="_blank"><img src="{% static 'data1/images/13.jpg' %}" alt="13" title="" id="wows1_24"/></a></li>
+             </ul></div>
+             <div class="ws_bullets"><div>
+               <a href="#" title=""><span><img src="{% static 'data1/tooltips/ekitabu1.jpg' %}" alt="eKitabu"/>1</span></a>
+               <a href="#" title=""><span><img src="{% static 'data1/tooltips/ekitabu2.jpg' %}" alt="eKitabu"/>1</span></a>
+               <a href="#" title=""><span><img src="{% static 'data1/tooltips/ekitabu3.jpg' %}" alt="eKitabu"/>1</span></a>
+               <a href="#" title=""><span><img src="{% static 'data1/tooltips/ekitabu4.jpg' %}" alt="eKitabu"/>1</span></a>
+               <a href="#" title=""><span><img src="{% static 'data1/tooltips/ekitabu5.jpg' %}" alt="eKitabu"/>1</span></a>
+               <a href="#" title=""><span><img src="{% static 'data1/tooltips/14.jpg' %}" alt="14"/>1</span></a>
+               <a href="#" title=""><span><img src="{% static 'data1/tooltips/15.jpg' %}" alt="15"/>2</span></a>
+               <a href="#" title=""><span><img src="{% static 'data1/tooltips/16.jpg' %}" alt="16"/>3</span></a>
+               <a href="#" title=""><span><img src="{% static 'data1/tooltips/17.jpg' %}" alt="17"/>4</span></a>
+               <a href="#" title=""><span><img src="{% static 'data1/tooltips/18.jpg' %}" alt="18"/>5</span></a>
+               <a href="#" title=""><span><img src="{% static 'data1/tooltips/19.jpg' %}" alt="19"/>6</span></a>
+               <a href="#" title=""><span><img src="{% static 'data1/tooltips/20.jpg' %}" alt="20"/>7</span></a>
+               <a href="#" title=""><span><img src="{% static 'data1/tooltips/1.jpg' %}" alt="1"/>8</span></a>
+               <a href="#" title=""><span><img src="{% static 'data1/tooltips/2.jpg' %}" alt="2"/>9</span></a>
+               <a href="#" title=""><span><img src="{% static 'data1/tooltips/3.jpg' %}" alt="3"/>10</span></a>
+               <a href="#" title=""><span><img src="{% static 'data1/tooltips/4.jpg' %}" alt="4"/>11</span></a>
+               <a href="#" title=""><span><img src="{% static 'data1/tooltips/5.jpg' %}" alt="5"/>12</span></a>
+               <a href="#" title=""><span><img src="{% static 'data1/tooltips/6.jpg' %}" alt="6"/>13</span></a>
+               <a href="#" title=""><span><img src="{% static 'data1/tooltips/7.jpg' %}" alt="7"/>14</span></a>
+               <a href="#" title=""><span><img src="{% static 'data1/tooltips/8.jpg' %}" alt="8"/>15</span></a>
+               <a href="#" title=""><span><img src="{% static 'data1/tooltips/9.jpg' %}" alt="9"/>16</span></a>
+               <a href="#" title=""><span><img src="{% static 'data1/tooltips/10.jpg' %}" alt="10"/>17</span></a>
+               <a href="#" title=""><span><img src="{% static 'data1/tooltips/11.jpg' %}" alt="11"/>18</span></a>
+               <a href="#" title=""><span><img src="{% static 'data1/tooltips/12.jpg' %}" alt="12"/>19</span></a>
+               <a href="#" title=""><span><img src="{% static 'data1/tooltips/13.jpg' %}" alt="13"/>20</span></a>
+             </div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.com" target="_blank">wowslider</a> by WOWSlider.com v8.6</div>
+             <div class="ws_shadow"></div>
+           </div>
+
+           <script type="text/javascript" src="{% static 'engine1/wowslider.js' %}"></script>
+           <script type="text/javascript" src="{% static 'engine1/script.js' %}"></script>
+           <!-- End WOWSlider.com BODY section -->
+           </div>
+         </div>
+       </div>
+     </div>
+     <br><hr>
+   </section>
+
+   <section id="Book">
+      <div class="row">
+       <div class="container text-left">
+         <div class="row content">
+           <h1 style="text-align:center;">Book an Appointment.</h1>
+           <form role="form" onsubmit="return checkDatabook();" class="form" action="/book/" method="post" id="book_form">{% csrf_token %}
+             <div class="form-group">
+               <fieldset class="contact">
+                 <legend height="80%" width="50%" style="float:center;"><b>Book an Appointment Here</b></legend>
+                 <div class="container-fluid">
+
+                   <div class="alert alert-success fade in" id="success">
+                     <a href="" class="close">&times;</a>
+                   </div>
+                   <script>
+                      $(document).ready(function(){
+                          $(".close").click(function(){
+                              $("#success").alert("close");
+                          });
+                      });
+                    </script>
+
+
+                   <div class="form-group">
+                     <label for="usrname">First Name.</label><br>
+                     <input type="text" class="form-control" id="usrnamebook" name"fnmb" placeholder="Type your first name eg Samwel"></input>
+       							<span class="help-block" id="errorfnamebook err"></span>
+   								</div>
+
+
+                   <div class="form-group">
+                     <label for="usrname">Second Name.</label><br>
+                     <input type="text" class="form-control" id="snmbook" name"snmb" placeholder="Type your second name eg Opiyo"></input>
+   									<span class="help-block" id="errorsnamebook err"></span>
+   								</div>
+
+
+                   <div class="form-group">
+                     <label for="gender">Gender.</label><br>
+                     <input type="radio" name="genderb" value="Male" id="genderbook">Male<br>
+                     <input type="radio" name="genderb" value="Male"id="genderbook">Female<br>
+   									<span class="help-block" id="errorgenderbook err"></span>
+   								</div>
+
+
+                   <div class="form-group">
+                     <label for="email">E-mail Address.</label><br>
+                     <input type="email" class="form-control" id="emailbook" name="email_addressb" placeholder="Type your e-mail address eg. sammyopiyo@hotmail.com"></input>
+   									<span class="help-block" id="errormailbook err"></span>
+   								</div>
+
+
+                   <div class="form-group">
+                     <label for="mobilenumber">Mobile Number.</label><br>
+                     <input type="text" class="form-control" id="fonnobook" name="mobile_numberb" placeholder="Type your mobile no. eg. +254707747652"></input>
+   									<span class="help-block" id="errornobook err"></span>
+   								</div>
+
+
+                   <div class="form-group">
+                       <label for="date">Date.</label><br>
+   <p class="anim-wrapper">Animations:<br>
+     <select class="anim form-control">
+       <option value="show">Show (default)</option>
+       <option value="slideDown">Slide down</option>
+       <option value="fadeIn">Fade in</option>
+       <option value="blind">Blind (UI Effect)</option>
+       <option value="bounce">Bounce (UI Effect)</option>
+       <option value="clip">Clip (UI Effect)</option>
+       <option value="drop">Drop (UI Effect)</option>
+       <option value="fold">Fold (UI Effect)</option>
+       <option value="slide">Slide (UI Effect)</option>
+       <option value="">None</option>
+     </select>
+   </p>
+                       <input type="date" class="form-control datepicker" id="datebook" name="date" placeholder="Select Date."></input>
+   										<span class="help-block" id="errordatebook"></span>
+                   </div>
+
+
+
+                   <div class="form-group">
+                       <label for="know">How did you know about Me?</label><br>
+                       <input type="radio" name="source_of_information" value="Online" id="source">Online<br>
+                       <input type="radio" name="source_of_information" value="Social Media" id="source">Social Media<br>
+                       <input type="radio" name="source_of_information" value="News Paper" id="source">News Paper<br>
+                       <input type="radio" name="source_of_information" value="Through a friend" id="source">Through a friend<br>
+                       <input type="radio" name="source_of_information" value="Other" id="source">Other<br>
+   										<span class="help-block" id="errorsourcebook err">
+   								</div>
+
+                   <div class="form-group">
+                       <label for="other">If other please specify.</label><br>
+                       <input type="text" class="form-control" id="otherbook" name="specification_of_other" placeholder="Specify source of information"></input>
+   										<span class="help-block" id="errorsourceinfobook">
+   								</div>
+
+
+
+                   <center><input class="btn btn-success" type="Reset"></input>  <input class="btn btn-success" type="Submit" value="submit" name="postbook"></input></center>
+
+                   </div>
+
+               </fieldset>
+             </div>
+           </form>
+         </div>
+       </div>
+     </div>
+     <br><hr>
+   </section>
+
+   <section id="Contact">
+      <div class="row">
+       <div class="container text-center">
+         <div class="row content">
+           <h1 style="text-align:center;">Contact Me.</h1>
+           <form role="form" onsubmit="return checkDatacontact();" class="form" method="post" action='http://samwelopiyo.carlandpetecollections.com/contact/contactscript.php'>
+             <div class="form-group">
+               <fieldset id="contact">
+                 <legend><b>Fill In The Details</b></legend>
+                 <div class="container-fluid">
+
+                   <div class="form-group">
+                     <label for="usrname">First Name.</label><br>
+                     <input type="text" class="form-control" id="usrnamecontact" name"fnm" placeholder="Type your first name eg Samwel"></input>
+   									<span class="help-block" id="errorfnamecontact">
+   								</div>
+                   <div class="form-group">
+                     <label for="usrname">Second Name.</label><br>
+                     <input type="text" class="form-control" id="snmcontact" name"snm" placeholder="Type your second name eg Opiyo"></input>
+   									<span class="help-block" id="errorsnamecontact">
+   								</div>
+                   <div class="form-group">
+                     <label for="email">E-mail Address.</label><br>
+                     <input type="email" class="form-control" id="emailcontact" name="email" placeholder="Type your e-mail address eg. sammyopiyo@hotmail.com"></input>
+   									<span class="help-block" id="errormailcontact">
+   								</div>
+                   <div class="form-group">
+                     <label for="mobilenumber">Mobile Number.</label><br>
+                     <input type="text" class="form-control" id="fonnocontact" name="mobile" placeholder="Type your mobile no. eg. +254707747652"></input>
+   									<span class="help-block" id="errornocontact">
+   								</div>
+                   <div class="form-group">
+                     <label for="message">Your Message.</label><br>
+                     <textarea class="col-sm-12 form-control" name="msg" placeholder="Type your message here." id="msgcontact"></textarea>
+   									<span class="help-block" id="errormsgcontact">
+   								</div>
+                   <input class="btn btn-success" type="Submit" value="Send" name="postmessage"></input>
+                   </div>
+
+
+
+               </fieldset>
+             </div>
+           </form>
+           </center>
+         </div>
+       </div>
+     </div>
+     <br><hr>
+   </section>
+   <footer>
+   <section id="Contacts">
+      <div class="row container-fluid">
+       <div class="jumbotron">
+         <div class="container-fluid text-center">
+           <div class="row content">
+             <h1 id="Contacts">Contacts</h1>
+             <b>Address</b>:
+             P.O. Box 16736<br>
+             <b>Nakuru, Kenya</b><br>
+             <b>Phone</b>: +254 <b>707 747 652</b><br>
+             <b>Email</b>: samonyango20@gmail.com , sammyopiyo@hotmail.com<br>
+             <b>Skype</b>: <b>sammy.opiyo2</b><br>
+             <br><center><a href="https://www.facebook.com/Samwel-Opiyo-1662202224043325/" target="_blank">Like My Facebook Page</a></center>
+             <center>&copy Copyright <script>document.write(new Date().getFullYear())</script> samwelopiyo.</center><br>
+             <a href="#Home" title="To Top">
+             <span class="glyphicon glyphicon-chevron-up"></span>
+             </a>
+           </div>
+         </div>
+         <br>
+       </div>
+     </div>
+   </section>
+   </footer>
+   </div>
+   <script type="text/javascript">
+        $(document).on('submit', '#book_form', function(e){
+          e.preventDefault();
+
+          $.ajax({
+            type:'POST',
+            url:'/book/',
+            data:{
+              first_name:$('#usrnamebook').val(),
+              second_name:$('#snmbook').val(),
+              gender:$('#genderbook').val(),
+              email_address:$('#emailbook').val(),
+              phone_number:$('#fonnobook').val(),
+              date:$('#datebook').val(),
+              source:$('source').val(),
+              specification_source:$('#otherbook').val(),
+              csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
+            },
+            success:funnction(){
+              alert("Your Record has been submitted Successfully!!");
+              document.getElementById('#book_form').innerHtml="Your Record has been submitted Successfully!!";
+            }
+          });
+        });
+   </script>
+
+    {% endblock %}

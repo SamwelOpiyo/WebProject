@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+    {% block content %}
+      <div class="container jumbotron">
+        <h1>Forms</h1>
+      </div>
+      <section id="Book">
+         <div class="row">
+          <div class="container text-left">
+            <div class="row content">
+              <h1 style="text-align:center;">Book an Appointment.</h1>
+              <form role="form" onsubmit="return checkDatabook();" class="form" action="/forms/" method="post" id="book_form">{% csrf_token %}
+                <div class="form-group">
+                  <fieldset class="contact">
+                    <legend height="80%" width="50%" style="float:center;"><b>Book an Appointment Here</b></legend>
+                    <div class="container-fluid">
+
+                      <div class="alert alert-success fade in" id="success">
+                        <a href="#" class="close">&times;</a>
+                      </div>
+                      <script>
+                         $(document).ready(function(){
+                             $(".close").click(function(){
+                                 $("#myAlert").alert("close");
+                             });
+                         });
+                       </script>
+                      {% csrf_token %}
+                      {{form.as_p}}
+                      <center>
+                        <input class="btn btn-success" type="Reset"></input>
+                        <input class="btn btn-success" type="Submit" value="submit" name="postbook"></input>
+                      </center>
+                    </div>
+
+                </fieldset>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <br><hr>
+    </section>
+
+    {% endblock %}
