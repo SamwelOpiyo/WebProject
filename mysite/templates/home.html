@@ -4,7 +4,7 @@
     {% block title %}
         <meta name="description" content="Business Website for Samwel Opiyo, a Web and Mobile Applications Developer.">
         <title>Home|samwelopiyo.com</title>
-        <link rel="stylesheet" href="csspreloader/main.css">
+        <link rel="stylesheet" href="{% static 'csspreloader/main.css' %}">
     {% endblock %}
     {% block content %}
     <script type="text/javascript" src="{% static 'myjavascript.js' %}"></script>
@@ -298,7 +298,7 @@
               <h2 class="text-center"><b>Need someone to develop Websites or Mobile Applications for you!!!</b></h2>
               <p>I am a 18 year old boy who comes from Nakuru.I am currently undertaking an Undergradute Bachelors Degree in Mathematics and Computer Science at The Multimedia University of Kenya.I completed my High School education from the <strong>Maranda High School</strong> and thereafter undertook a course on <strong>Mobile Application Development
               </strong> at <em><B>eMobilis Institute</b></em>. I got my primary education from <b>Kamagambo Adventist Primary School (KAPS)</b> and nursery education from <i>Teaching Nursery</i>.<p>
-              <p>I am <mark><strong style="font-size:150%;">skillful in web development and mobile application development</strong></mark>. I program using<div style="font-family:arial;">PHP and MYSQL.</div></p>
+              <p>I am <mark><strong style="font-size:150%;">skillful in web development and mobile application development</strong></mark>. I program using Python, PHP and MYSQL.</div></p>
               <p>I have always been having an interest in <abbr title="Information Technology">IT</abbr> especially in Software and mobile application development. In 2015, while at Maranda High School I <strong>Participated in the National Science Fair for High Schools</strong> with a <mark><em>project titled Computerized Census System</em></mark> <strong>up to the Regional Levels</strong>.</p>
               <p>Interest in IT propelled me to participate in an <em>online Digital Essay titled</em> "<strong>Dear Mr President, My Life as a Digital Learner...</strong>" at<a href="http://essay.ekitabu.com/" target="_blank">.essay.ekitabu.com
               </a> where I emerged 2<sup>nd</sup> Runners Up to beat the numerous students who participated in the essay as indicated in <a href="http://essay.ekitabu.com/?past_competitions=2015">essay.ekitabu.com/?past_competitions=2015</a>.</p>
@@ -582,6 +582,10 @@
                      <a href="" class="close">&times;</a>
                    </div>
                    <script>
+                     $(document).ready(function(){
+                             $("#success").alert("hide");
+                         );
+                     });
                       $(document).ready(function(){
                           $(".close").click(function(){
                               $("#success").alert("close");

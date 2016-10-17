@@ -35,6 +35,9 @@ def home(request):
 def former(request):
     return render(request, 'index.html')
 
+def time(request):
+    return render(request, 'time.html')
+
 def forms(request):
     if request.POST:
         form=BookAppointmentForm(request.POST)
